@@ -15,7 +15,15 @@
 //   "negative odd"    if num is negative and odd
 function classifyNumber(num) {
   // TODO: your code here
+if (num === 0){
+  return "zero";
 }
+    const sign = num > 0 ? "positive" : "negative";
+    const parity = num % 2 === 0 ? "even" : "odd";
+    
+    return `${sign} ${parity}`;
+}
+
 
 console.log(classifyNumber(0)); // "zero"
 console.log(classifyNumber(4)); // "positive even"
@@ -33,6 +41,9 @@ console.log(classifyNumber(-7)); // "negative odd"
 // If score is less than 0 or greater than 100, return "Invalid score".
 function getLetterGrade(score) {
   // TODO: your code here
+  if (score > 100){
+    return "invalid score";
+  }
 }
 
 console.log(getLetterGrade(95)); // "A"
